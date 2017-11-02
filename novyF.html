@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+      <SCRIPT>
+              function showAlert()
+              {
+              
+          var x = document.getElementById("myText").value;
+                var y = document.getElementById("2").value;
+          
+    document.getElementById("demo").innerHTML = x+ " "+y;
+    
+    
+    
+              }
+              
+  
+              
+             function myMoveFunction() {
+             var z = 0;
+             
+    document.getElementById("semo").innerHTML = z+=1;
+}
+
+                   function remove() {
+              
+             
+    document.getElementById("semo").innerHTML = " "
+        document.getElementById("demo").innerHTML= " "
+    
+}
+
+      </SCRIPT>
+  </head>
+  
+  <body>
+  <FORM>
+<TABLE BORDER= "2" >
+
+<TR>
+   <TD> Meno</TD> <TD> <input type="text" maxlength="15" size="10"  id="myText" ></TD>
+   
+</TR>
+       <TR>
+       
+<TD> Priezvisko</TD> <TD> <input type="text" maxlength="15" size="10"  ID ="2" > </TD>
+      </TR>
+           <TR>
+          <TD> <button onclick="showAlert()" onmousemove="myMoveFunction()" >Try it</button> </TD>
+          
+  
+      <TD> <input value="reset" type="reset" "> </button>  </TD>
+          </TR>
+
+</TABLE>
+
+  </FORM>
+
+             <DIV id="demo"></DIV>
+      <DIV id="message"> </DIV>
+                <DIV id="semo"></DIV>
+
+  </body>
+  
+  
+</html>
