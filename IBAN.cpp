@@ -11,9 +11,9 @@
 void koduprav(long ucet, long kod);
 long kod;
 long ucet;
-int iban [24];
+int iban [30];
 
-char pom[24];
+long pom[30];
 
 int main()
 
@@ -56,24 +56,25 @@ while(ucet>0){
 
 printf("\n" );
 
-long v=kod;
+
 int p=3;
-while(v>0){
-   pkod[p]=v%10;
-   v=v/10;
+while(kod>0){
+   pkod[p]=kod%10;
+   kod=kod/10;
    p--;
 }
 
 
 
-pom[0]='S';
-pom[1]='K';
+ 
 
 
-for(int j=0;j<4;j++)
 
-iban[j]=pkod[j];
 
+iban[0]=pkod[0];
+iban[1]=pkod[1];
+iban[2]=pkod[2];
+iban[3]=pkod[3];
 
 for(int i=4;i<10;i++)
 iban[i]=0;
@@ -105,43 +106,72 @@ iban[25]=0;
 //printf("\n" );
 
 long nn;
+
+//for (int i = 0; i < 26; i++)
+//printf(" %ld", iban[i]);
+
   
 for (int i = 0; i < 26; i++)
     nn = 10 * nn + iban[i];
 
   
+// printf("\n nn %ld",nn);
+//long val=(nn/97);
+ 
+ long pr=(nn%97);
+// printf("\n%ld",pr);
+ 
 
-long val=(nn/97);
+//int intpart = (int)val;
+// long decpart = nn - intpart;
+//decpart=decpart*97;
+//int pr=(int) decpart;
+ //pr=97-pr;
  
- 
+ int prr=97-pr;
+ int c1=(prr/10)%10;
+ int c2=(prr)%10;
 
-int intpart = (int)val;
- long decpart = nn - intpart;
-decpart=decpart*97;
-int pr=(int) decpart;
- pr=97-pr;
- int c1=(pr/10)%10;
- int c2=(pr)%10;
- //printf("\n%d",pr);
  
-//printf("\n%d",c1);
+ 
+//printf("\n%d",prr);
 //printf("\n%d",c2);
-iban[2]=c1;
-iban[3]=c2;
+//printf("\n%d",c1);
 
-iban[0]=83;
-iban[1]=75;
+pom[2]=c1;
+pom[3]=c2;
+
+ 
+
+
 
 
 printf("\n");
+
+pom[0]=83;
+pom[1]=75;
+
+//for(int j=0;j<22;j++)
+//printf("%ld", iban[j]);
+
+for(int j=0;j<22;j++)
+pom[j+4]=iban[j];
+
+ 
+
+  
+
+
 for(int j=0;j<2;j++)
 
-printf("%c", iban[j]);
+printf("%c", pom[j]);
+
+ 
+
+for(int j=2;j<26-2;j++)
+printf("%ld", pom[j]);
 
 
-for(int j=2;j<20;j++)
-
-printf("%ld", iban[j]);
 
 }
 
