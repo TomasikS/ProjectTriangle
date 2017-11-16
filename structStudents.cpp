@@ -122,18 +122,18 @@ index=i;   }
    
      // 6. calculate average salary of student that are under 30 years old
    float sal;
-   
+   int u=0;
     for(int i=0;i<20;i++)
    
    if(student[i].age<30)
    {
-   
+   u++;
    sal=sal+student[i].salary;
    
    }
    
    
-   sal=sal/20;
+   sal=sal/u;
    
    
    printf("\n average salary of students with age under 30 %f", sal);
