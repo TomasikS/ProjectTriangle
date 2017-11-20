@@ -186,7 +186,7 @@ index=i;   }
 
 
 // 10. sort students by salary ascending and write down the list 
-float pom;
+person pom;
    for(int i=0; i<=19;i++) {
    
 for (int j=0;j<=18;j++) 
@@ -197,9 +197,9 @@ for (int j=0;j<=18;j++)
 if(student[i].salary< student[j].salary)
    {
    
-   pom=student[i].salary;
-   student[i].salary=student[j].salary;
-   student[j].salary=pom;
+   pom=student[i];
+   student[i]=student[j];
+   student[j]=pom;
    
   
    
