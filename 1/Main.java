@@ -21,7 +21,7 @@ public class Main {
     car1.setspeed(0);
     car1.PrintInfo();
    
-   Car car2 = new Car(7.5f, "Skoda"  );
+   Car car2 = new Car(7.5f, "Skoda", "Kosice"  );
     car2.PrintInfo();
     
     car2.PrintInfo();
@@ -35,6 +35,22 @@ public class Main {
     
  System.out.println(car2.getPrice(800, 3.80f));
     
+ car1.IncreaseSpeed(50);
+  car2.IncreaseSpeed(70);
+  
+  if (car1.getspeed() < car2.getspeed())
+      System.out.println("rýchlejšie je auto 2");
+  
+  
+   if (car1.getspeed() >  car2.getspeed())
+      System.out.println("rýchlejšie je auto 1");
+  
+  if (car1.getspeed() ==  car2.getspeed())
+      System.out.println("rovnaké rýchlosti");
+  Car car3=car2;
+  
+  
+  car3 = new Car(7.5f, "Skoda", "Presov"  );
     }
     
 }
