@@ -1,5 +1,4 @@
 
-import static java.lang.Math.random;
 import java.util.Random;
 
 /*
@@ -175,10 +174,14 @@ char p2 = (char) (r.nextInt(26) + 'a');
 
   
   spz=s1+ "-"+ p1+p2;
+  spz=spz.toUpperCase();
 System.out.println(spz);
+
+ 
+
  }
 
-
+public String getspz(){return spz;}
 
 
 
