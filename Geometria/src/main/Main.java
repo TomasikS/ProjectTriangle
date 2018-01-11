@@ -6,6 +6,8 @@
 package main;
 import geometry.Square;
 import geometry.Rectangle;
+import geometry.Triangle;
+
 /**
  *
  * @author pc
@@ -58,9 +60,11 @@ public class Main {
         System.out.println("obvod"+q3);
         System.out.println("uhlopriecka"+q1);
         
-        
-        
-        
+        Triangle t1=new Triangle(3,4,5);
+        System.out.println("obvod"+t1.Obvod());
+        System.out.println("obsah"+ t1.getarea());
+        if(t1.IsRightTriangle()==true ) System.out.println("je pravohlý");
+          if(t1.IsRightTriangle()==false ) System.out.println("nie je pravohlý");
     }
 
   
