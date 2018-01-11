@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  *
- * @author pc
+ * @author Lenovo
  */
 public class Main {
 
@@ -111,6 +111,43 @@ System.out.println("priemerna rychlost"+pr);
 
 int number=ran.nextInt(taxi.length);
 System.out.println("zavola taxik"+taxi[number].getspz());
-    }
-    
+
+
+Car v1=new Car(4, "red", 50000);
+Car v2=new Car(4, "orange", 10000);
+Car v3=new Car(6, "green", 502000);
+Car v4=new Car(4, "green", 30000);
+
+Car pole[]=new Car[4];
+
+pole[0]=v1;
+pole[1]=v2;
+pole[2]=v3;
+pole[3]=v4;
+
+int min=pole[0].getprice();
+int index=0;
+int sp=0;
+double prc=0;
+
+int g=0;
+for (int i=0; i<pole.length;i++)
+{
+if(pole[i].getcolour().equals("green")) g++;
+if (pole[i].getcapacity() <min) { min=pole[i].getcapacity();
+index=i;
 }
+
+sp=sp+pole[i].getprice();
+prc=sp/pole.length;
+
+        
+}
+System.out.println("priemerná cena"+prc);
+    
+  System.out.println("zelene auta"+g);  
+     System.out.println("minimalna kapacita"+min);  
+        System.out.println("minimalnu kapacitu má"+ index + "auto");  
+     
+    }
+    }

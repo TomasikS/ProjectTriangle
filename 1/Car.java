@@ -9,17 +9,19 @@ import java.util.Random;
 
 /**
  *
- * @author pc
+ * @author Lenovo
  */
-
- public class Car {
+public class Car {
  private String brand;   
  private int speed;   
  private boolean engine; 
  private float consum ;
  private boolean frontWiger;
  private String spz;
-      String s1;   
+      String s1;  
+ private int capacity;
+private  String colour;
+  private int price;    
          
   public Car(){
 
@@ -47,7 +49,17 @@ consum=s;
 brand=f;
 generate(city);
   }
-  
+    public Car( int c, String i, int k){
+ capacity=c;
+ colour=i;
+ price=k;
+  }
+      
+      
+      
+      
+      
+      
   
   public void setbrand(String value){
   brand=value;
@@ -183,13 +195,32 @@ System.out.println(spz);
 
 public String getspz(){return spz;}
 
+public void setcapacity(int u)
+{
+capacity=u;
+}
+
+
+public void setprice( int y){
+price=y;
+}
+
+public void setcolour(String j){
+colour =j;
+}
+
+int getprice(){return price;}
+
+
+public String getcolour()
+        
+{return colour;}
+        
+public int getcapacity(){
+return capacity;
+}
+
 
 
 
  }
-
-
-
-
-
-
