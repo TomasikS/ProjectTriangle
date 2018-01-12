@@ -4,9 +4,13 @@
  * and open the template in the editor.
  */
 package main;
-import geometry.Square;
-import geometry.Rectangle;
-import geometry.Triangle;
+import geometry2d.Circle;
+import geometry2d.Square;
+import geometry2d.Rectangle;
+import geometry2d.Triangle;
+import geometry3d.Ball;
+import geometry3d.Cube;
+import geometry3d.Kvader;
 
 /**
  *
@@ -22,7 +26,7 @@ public class Main {
         Square s=new Square(10.25);
        
         
-        double a=s.obsah();
+        double a=s.getArea();
         
         double b=s.obvod();
         
@@ -38,7 +42,7 @@ public class Main {
         
         
         double c=r.getdiagonal();
-        double d=r.obsah();
+        double d=r.getArea();
         double f=r.obvod();
         
          System.out.println("obdlznik 1" );
@@ -51,7 +55,7 @@ public class Main {
         
         
         double q1=r1.getdiagonal();
-        double q2=r1.obsah();
+        double q2=r1.getArea();
         double q3=r1.obvod();
         
         
@@ -82,8 +86,28 @@ public class Main {
                 if(t4.rovnostranny()==true ) System.out.println("je rovnostranny");
          if(t4.rovnostranny()==false ) System.out.println("nie je rovnostranny");
           
+         
+         Circle k=new Circle(7.5);
+         System.out.println("obvod"+ k.getPerimeter());
+          System.out.println("obsah"+ k.getArea());
           
           
+          
+          Ball q=new Ball(4.75);
+          System.out.println(q.getSurface());
+              System.out.println(q.getVolume());
+              
+              
+               Cube cu=new Cube(8.88);
+            System.out.println(cu.getSurface());
+              System.out.println(cu.getVolume());
+              System.out.println(cu.uhl());
+              
+              Kvader kv=new Kvader(10.4,15,16.75);
+              
+                 System.out.println(kv.getSurface());
+                       System.out.println(kv.getVolume());
+                   System.out.println(kv.uhl());
     }
 
   
