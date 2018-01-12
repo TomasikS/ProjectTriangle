@@ -65,6 +65,25 @@ public class Main {
         System.out.println("obsah"+ t1.getarea());
         if(t1.IsRightTriangle()==true ) System.out.println("je pravohlý");
           if(t1.IsRightTriangle()==false ) System.out.println("nie je pravohlý");
+          
+          
+           Triangle t2=new Triangle(3,4,5); 
+          if(t2.nerovnost()==true ) System.out.println("plati nerovnost");
+         if(t2.nerovnost()==false ) System.out.println("neplati nerovnost");
+          
+          
+          Triangle t3=new Triangle(4,4,5); 
+          
+                if(t3.rovnoramenny()==true ) System.out.println("je rovnoramenny");
+         if(t3.rovnoramenny()==false ) System.out.println("nie je rovnoramenny");
+          
+                Triangle t4=new Triangle(5,5,5); 
+          
+                if(t4.rovnostranny()==true ) System.out.println("je rovnostranny");
+         if(t4.rovnostranny()==false ) System.out.println("nie je rovnostranny");
+          
+          
+          
     }
 
   

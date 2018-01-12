@@ -37,6 +37,7 @@ public  double getdiagonal(){return Math.sqrt(a*b);}
   double temp=a;
   a=b;b=temp;
   }
+ 
   
  
 }

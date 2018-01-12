@@ -55,7 +55,23 @@ public class Triangle {
    
    }
    
+   public   boolean nerovnost()
+  {
+  if((a+b >c) && (a+c >b) && (b+c >a)) return true;
+  else return false;
+  }
+    
+    public  boolean rovnostranny(){
+    if ((a==b) && (b==c) && (a==c)) return true;
+    else return false;
+    
+    }
    
-   
+   public boolean rovnoramenny(){
+    if((a==b) && (b!=c)) return true;
+       if((b==c) && (a!=c)) return true;
+     if((a==c) && (b!=c)) return true;
+     else return false;
+    }
    
 }
