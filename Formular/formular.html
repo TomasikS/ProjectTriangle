@@ -26,15 +26,16 @@ Name:
  </TD>
       <TD>   
       
-           <input type="text" maxlength="15" size="10"  value=""  ID ="1" >
-           
+           <input type="text" maxlength="15" size="10"  value=""  ID ="fName" >
+           <div id="errlname"></div>
          </TD> 
               
             <TD>      <label> 
            Surname:   
               </TD> 
                     <TD> 
-               <input type="text" maxlength="15" size="10"  value=""  ID ="2" >
+               <input type="text" maxlength="15" size="10"  value=""  ID ="lName" >
+			   <div id="errfname"></div>
                   </TD> 
                   
           </TR>  
@@ -109,10 +110,20 @@ Name:
           
           
           
-          <input type="checkbox">  show birthday / age
+          <input type="checkbox" ID="showage">  show birthday / age
            
+   <div id="myTable">
+  
+  
+</div>
    
-              
+   
+   
+   
+   
+   
+     <script src="jquery-3.2.1.min.js"></script>
+	<script src="scriptform.js"></script>    
               
               
  </body>
