@@ -1,0 +1,35 @@
+#formTable {padding-left: 20px; padding-right: 20px;
+                                 width:70%;   
+    margin-left:20%; 
+    margin-right:20%;
+          text-align:center;
+     margin-top:5%; 
+       background-color:gold;
+     }
+ td{padding-left: 10px; padding-right: 10px;   }
+ label {font-weight:bold; color:red;} 
+
+#btnOk {  color: #fff;
+ font-size: 12;
+ width: 135px;
+ height: 60px;
+ border: none;
+ margin: 0;
+ padding: 0;
+ background: #0c0 url(image) 0 0 no-repeat; }
+
+div.mainDiv {position: relative; width: 700px;
+margin: auto;}
+
+div.menu { text-align:center;
+         padding-left: 10px; padding-right: 10px;
+                   background-color:green;
+                     margin-left:20%; 
+    margin-right:10%;
+     }
+
+div.selectBox { }
+
+.errors {color: red;}
+
+.table { margin: auto; width: 90%}
