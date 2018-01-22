@@ -55,11 +55,23 @@ public class Main {
 
         }
 
+Point bod15=new Point(2,5);
+            Point bod17=new Point(8,9);
 
 
+            Point bod16=new Point(4,8);
 
+            Line line1=new Line(bod15, bod16);
 
+Line line2=new Line(1,3,4,6);
+System.out.println(line1.GetLength());
+Point bodd=line2.GetMiddleofLine();
+ bodd.PrintInfo();
 
+ Triangle tr=new Triangle(bod15,bod16, bod17);
+
+            System.out.println("perimeter"+tr.getPerimeter());
+            System.out.println("area"+tr.getArea());
         }
 
     }
