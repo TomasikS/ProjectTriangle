@@ -1,3 +1,5 @@
+import Date.MyDate;
+
 public class Main {
 
 
@@ -72,6 +74,29 @@ Point bodd=line2.GetMiddleofLine();
 
             System.out.println("perimeter"+tr.getPerimeter());
             System.out.println("area"+tr.getArea());
+
+            Point bod18=new Point(3,3);
+
+            Point bod19=new Point(4,7);
+
+            Point bod20=new Point(5,3);
+
+            Triangle tri=new Triangle(bod18,bod19, bod20);
+
+            if(tri.Rovnoramenny()== true) System.out.println("je rovnoramenny");
+            Point bod21=new Point(7,7);
+
+            Point bod22=new Point(20,7);
+
+            Point bod23=new Point(20,2);
+
+            Triangle tria=new Triangle(bod21,bod22, bod23);
+
+            if(tria.Pravouhly()== true) System.out.println("je pravouhly");
+            MyDate d =new MyDate();
+            d.Today();
+d.Today2();
+
         }
 
     }
