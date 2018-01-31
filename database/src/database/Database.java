@@ -14,7 +14,7 @@ public class Database {
     /**
      * @param args the command line arguments
      */
-     public static void main(String[] args)
+     public static void main(String[] args) throws ClassNotFoundException
 
     {Tipos t=new Tipos();
         t.generate();

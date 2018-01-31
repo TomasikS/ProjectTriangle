@@ -5,6 +5,7 @@
  */
 package database;
 
+import com.mysql.jdbc.PreparedStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -16,44 +17,82 @@ import java.sql.Statement;
  * @author pc
  */
 public class MySQLDatabase {
-    private final String url = "jdbc:mysql://localhost:3306//";
-    private final String dbname = "tipos";
-    private final String driver = "com.mysql.jdbc.Driver";
-    private final String user = "user2";
-    private final String password = "secret";
-    private Connection conn;
+   private static final String driver = "com.mysql.jdbc.Driver";
+    private  static final String user = "user2";
+    private  static final String password = "secret";
+    private  static Connection conn;
+private static final String url = "jdbc:mysql://localhost:3306/tipos";
 
-
-    public void TestConnection() {
+    public void TestConnection() throws ClassNotFoundException {
        
 
       Connection connection = null;
       Statement statement = null;
       ResultSet resultSet = null;
 
-      try{
-         connection=DriverManager.getConnection
-            (url,user,password);
-         statement=connection.createStatement();
-     /*    resultSet=statement.executeQuery
-            ("SELECT * FROM books");
-         while(resultSet.next()){
-            System.out.printf("%s\t%s\t%s\t%f\n",
-            resultSet.getString(1),
-            resultSet.getString(2),
-            resultSet.getString(3),
-            resultSet.getFloat(4));
-         }*/
+      try {
+           Class.forName("com.mysql.jdbc.Driver").newInstance();
+          conn= DriverManager.getConnection(url,user, password);
 
-      }catch(SQLException ex){
-      }finally{
-         try {
-            resultSet.close();
-            statement.close();
-            connection.close();
-         } catch (SQLException ex) {
-         }
-      }
+        }
+
+
+
+             catch(Exception e) {  System.out.println("error");}
+
+
+
+
+
+    if(conn==null)      System.out.println("error");
+    else        System.out.println("ok");
+
+        }
+    
+    public boolean insertValuesIntoDrawHistory(int arr[]){
+        try{
+        Class.forName(driver).newInstance();
+        conn= DriverManager.getConnection(url, user,password);
+            String cmd="INSERT INTO betdetails(ball1, ball2, ball3, ball4, ball5) ";
+            cmd+=" VALUES(?,?,?,?,?)";
+            PreparedStatement preparedStatement = (PreparedStatement) conn.prepareStatement(cmd);
+            preparedStatement.setInt(1,arr[0]);
+            preparedStatement.setInt(2,arr[1]);
+            preparedStatement.setInt(3,arr[2]);
+            preparedStatement.setInt(4,arr[3]);
+            preparedStatement.setInt(5,arr[4]);
+            preparedStatement.executeUpdate();
+            conn.close();
+        }
+
+
+        catch(Exception e){
+            System.out.println("Error. I cannot connect to the database!");
+        }
+        return true;
+    }
+    
+    
+    
+    
+    public void getnewBets(){
+    
+    
+      try {
+           Class.forName("com.mysql.jdbc.Driver").newInstance();
+          conn= DriverManager.getConnection(url,"user1", password);
+
+          String cmd="SELECT *FROM Bets INNER JOIN betdetails ON Bets.id=betsdetails.id WHERE drawID  is null";
+           PreparedStatement preparedStatement =(PreparedStatement) conn.prepareStatement(cmd);
+          
+        }
+
+
+
+             catch(Exception e) {  System.out.println(e.getMessage());}
+if(conn==null)      System.out.println("error");
+    else        System.out.println("ok");
+    
    }
-}
 
+   }
