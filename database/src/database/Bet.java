@@ -26,4 +26,14 @@ public class Bet {
     
     }
     
+    public int getID(){return ID;}
+    public int getIDUser(){return IDUser;}
+    public Date getDate(){return date;}
+    public int getdrawID(){return drawID;}
+    public int getbet1(){return bet1;}
+       public int getbet2(){return bet2;}
+         public int getbet3(){return bet3;}
+        public int getbet4(){return bet4;}
+      public int getbet5(){return bet5;}
+    
 }

@@ -6,6 +6,7 @@
 package database;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -44,6 +45,19 @@ public class Tipos {
 
     }
 
-
+    public void printNewBets(List<Bet> list)
+            {
+    
+               for (Bet temp:list) 
+               {
+    temp.getbet1();
+      temp.getbet2();
+        temp.getbet3();
+          temp.getbet4();
+            temp.getbet5();
+    
+    
+               }
+            }
 
 }
